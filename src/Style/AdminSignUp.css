@@ -1,0 +1,77 @@
+.Adminsignup{
+    height: 90vh;
+    width:100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      
+
+
+}
+.Adminsignup form{
+    border:1px  solid gray;
+    font-size: 20px;
+    border-radius: 20px;
+    /* box-shadow: linear-gradient(120deg,skyblue); */
+    align-items: center;
+    font-weight: bolder;
+    justify-content: center;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 40px 20px;
+    padding: 40px 40px;
+
+   
+}
+.Adminsignup input{
+    /* margin: 10px auto; */
+    display: inline;
+    /* justify-items: last baseline; */
+    margin: 8px auto;
+   border-radius: 6px;
+    width: 270px;
+    height: 30px;
+
+}
+.Adminsignup input::placeholder{
+    color:black;
+    font-size: 15px;
+
+}
+ .button1{
+  margin: 8px;
+  padding: 15px 25  px;
+  
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+ 
+  border: 0px;
+  font-weight: 700;
+  box-shadow: 0px 0px 14px -7px #f09819;
+  background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+}
+.button1:hover {
+    background-position: right center;
+    
+    color: #fff;
+    text-decoration: none;
+    
+  }
+  
+  .button1:active {
+    transform: scale(0.95);
+  }
+.img
+{
+    height: 80vh;
+    width: 40vw;
+    margin-right: 40px;
+}
