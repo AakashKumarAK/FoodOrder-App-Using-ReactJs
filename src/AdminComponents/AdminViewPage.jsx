@@ -61,7 +61,7 @@ const AdminViewPage = () => {
                 <span id="price">₹{x.price-x.price*20/100}</span>
                 <div class="opt">
               <ModeEditIconlineIcon id="eicon" onClick={()=>{editproduct(x.id)}} />
-              <DeleteIcon  id= onClick={()=>{removeDish(x.id,x.name)}}/>
+              <DeleteIcon   onClick={()=>{removeDish(x.id,x.name)}}/>
               </div>
               </div>
               </div>

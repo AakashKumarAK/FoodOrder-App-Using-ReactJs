@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import '../Style/UserSignUp.css';
 import axios from "axios"
 const UserSignUp = () => 
 {

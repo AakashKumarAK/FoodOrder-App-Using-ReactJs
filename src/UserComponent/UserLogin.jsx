@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import '../Style/UserLogin.css';
 
 import axios from "axios";
 
@@ -35,7 +36,7 @@ const UserLogin = () => {
                 {
                     alert("Login Successfull");
                   
-                    navigate('/userview') ;
+                    navigate('/userviewpage') ;
                      a=true;
                     
                     

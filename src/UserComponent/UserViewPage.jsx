@@ -1,15 +1,17 @@
 import { useState,useEffect} from "react";
 import axios from "axios";
 import StarIcon from '@mui/icons-material/Star';
+import '../Style/UserViewPage.css';
 const UserViewPage = () => {
     let[data,setdata]=useState([])
+    
    
       useEffect(()=>
       {
-        axios.get('http://localhost:1000/Products')
+        axios.get('http://localhost:1000/Product')
         .then((res)=>
         {
-          console.log(res.data);
+          console.log(" data",res.data);
           setdata(res.data)
         })
         .catch((err)=>
@@ -21,10 +23,12 @@ const UserViewPage = () => {
       
       return ( 
           <div className="Userviewpage">
+            
             {data.map((x)=>
             {
               return(
                 <div className="displayproducts">
+                 
                   
                   <img src={x.thumbnailurl}/>
                 <div className="restaurant">

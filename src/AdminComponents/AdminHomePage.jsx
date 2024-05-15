@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import AdminNavbar from "./AdminNavbar";
-import AdminViewPage from "./AdminiewPage";
+import AdminViewPage from "./AdminViewPage";
 import AdminProductPage from "./AdminProductPage";
 import EditProduct from "./AdminEditProductPage";
 
