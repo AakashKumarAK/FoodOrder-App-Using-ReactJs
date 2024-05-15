@@ -8,11 +8,12 @@ const UserViewPage = () => {
    
       useEffect(()=>
       {
-        axios.get('http://localhost:1000/Product')
+        // axios.get('http://localhost:1000/Product')
+        axios.get('https://dummyjson.com/recipes')
         .then((res)=>
         {
-          console.log(" data",res.data);
-          setdata(res.data)
+          console.log(" data",res.data.recipes);
+          setdata(res.data.recipes)
         })
         .catch((err)=>
         {
@@ -30,18 +31,26 @@ const UserViewPage = () => {
                 <div className="displayproducts">
                  
                   
-                  <img src={x.thumbnailurl}/>
+                  <img src={x.image}/>
                 <div className="restaurant">
                   <h4>{x.restaurant} ||</h4>
-                  <b>{x.Ratings}<StarIcon  id="star"/></b>
+                  
+                  <b>{x.rating}<StarIcon  id="star"/></b>
                  </div>
+                
+
                 <span class="">{x.name} </span>
-                <strike><p>MRP:₹{x.price}.00</p></strike>
-                <div class="desc">
+                <p>MRP:₹{Math.floor(Math.random() * (500 - 200 + 1)) + 200}.00</p>
+                {/* <div class="desc">
                   <span id="price">₹{x.price-x.price*20/100}</span>
                   
+                </div> */}
+                 <div>
+                 <p>Prepminuties{x.prepTimeMinutes}</p>
+                 <p>cookTimeMinutes{x.cookTimeMinutes}</p>
+                  </div>
                 </div>
-                </div>
+                
               )
             })}
           </div>

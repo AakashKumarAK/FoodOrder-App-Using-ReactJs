@@ -6,47 +6,60 @@ import axios from "axios";
 
 
 const UserLogin = () => {
-    let [uname,setuname]=useState("");
+    var [uname,setuname]=useState("");
     console.log(uname);
-    let [password,setpassword]=useState("");
+    var [password,setpassword]=useState("");
     console.log(password);
         let[user,setuser]=useState([]);
         let navigate=useNavigate();
-        useEffect((e)=>
-        {
-            // e.preventDefault();
-            axios.get('http://localhost:1000/User')
-            .then((res)=>
-            {
-                console.log(res.data);
-                setuser(res.data);
-            })
-            .catch((err)=>
-            {
-                console.log(err);
-            })
-        },[])
-        function login(e)
-        {
-            let a=false;
+        // useEffect((e)=>
+        // {
+        //     // e.preventDefault();
+        //     axios.get('http://localhost:1000/User')
+        //     .then((res)=>
+        //     {
+        //         console.log(res.data);
+        //         setuser(res.data);
+        //     })
+        //     .catch((err)=>
+        //     {
+        //         console.log(err);
+        //     })
+        // },[])
+        // function login(e)
+        // {
+        //     let a=false;
                         
-            user.map((x)=>
-            {
-                if(uname==x.email && password==x.password)
-                {
-                    alert("Login Successfull");
+        //     user.map((x)=>
+        //     {
+        //         if(uname=="Aakash" && password=="123")
+        //         {
+        //             a=true; 
+        //             alert("Login Successfull");
                   
-                    navigate('/userviewpage') ;
-                     a=true;
+        //             navigate('/userviewpage') ;
+                     
                     
                     
-                }
-            })
-            if(a==false)
-            {
-                alert("Invalid username or password");
-            }
+        //         }
+        //     })
+        //     if(a==false)
+        //     {
+        //         alert("Invalid username or password");
+        //     }
+        // }
+
+        //user dummy login
+        function login() 
+    {
+        if(uname=="admin" && password=="123")
+        {
+            navigate('/userviewpage')
         }
+        else{
+            alert("Admin login Failed");
+        }
+    }
     return (  
         <div className="UserLogin">
             {/* <h1>AdminLogin</h1> */}
@@ -69,13 +82,3 @@ const UserLogin = () => {
 export default UserLogin;
 
 
-// function login() 
-//     {
-//         if(uname=="admin" && password=="123")
-//         {
-//             alert("Admin Loged Successfully");
-//         }
-//         else{
-//             alert("Admin login Failed");
-//         }
-//     }
